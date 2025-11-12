@@ -47,8 +47,8 @@ export default function About() {
                   With a strong foundation in the <span className="font-semibold text-sky-600">MERN stack</span> and{' '}
                   <span className="font-semibold text-sky-600">Laravel</span>, I’ve
                   led teams, trained developers, and built applications that solve
-                  real-world challenges. My journey began with curiosity—how
-                  technology connects people—and continues with a drive to
+                  real-world challenges. My journey began with curiosity how
+                  technology connects people and continues with a drive to
                   innovate, teach, and empower others through code.
                 </p>
 
