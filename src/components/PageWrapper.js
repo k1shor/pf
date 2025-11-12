@@ -8,7 +8,7 @@ export default function PageWrapper({ children }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -30 }}
       transition={{ duration: 0.5 }}
-      className="p-15 bg-transparent"
+      className="md:p-15 bg-transparent overflow-hidden"
 
     >
       {children}

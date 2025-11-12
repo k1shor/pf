@@ -5,6 +5,7 @@ import BackToHome from '@/components/BackToHome';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { FaGithub, FaLinkedin, FaFacebook, FaInstagram } from 'react-icons/fa';
 
 export default function Resume() {
   const techStack = [
@@ -12,23 +13,54 @@ export default function Resume() {
     'Redux Toolkit', 'TypeScript', '.NET', 'SQL Server', 'MATLAB', 'Docker', 'Firebase'
   ];
 
+  const sections = [
+    { id: 'experience', label: 'Experience' },
+    { id: 'education', label: 'Education' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'achievements', label: 'Achievements' },
+  ];
+
+  const handleScroll = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <>
       <Head>
         <title>Resume | Kishor Munikar</title>
-        <meta name="description" content="Explore Kishor Munikar's qualifications, skills, and experience." />
+        <meta
+          name="description"
+          content="Official resume of Kishor Munikar — Full Stack Developer, IT Engineer, and Technical Instructor based in Nepal. Explore education, projects, and professional achievements."
+        />
+        <meta
+          name="keywords"
+          content="Kishor Munikar, Full Stack Developer, Software Engineer, Portfolio, Resume, Web Developer, Next.js, React.js, Nepal Developer, Node.js, MERN, DOTNET"
+        />
+        <meta name="author" content="Kishor Munikar" />
+        <meta property="og:title" content="Resume | Kishor Munikar" />
+        <meta
+          property="og:description"
+          content="Explore Kishor Munikar’s technical expertise, experience, and achievements in web development, IT education, and engineering."
+        />
+        <meta property="og:image" content="/images/kishor.jpg" />
+        <meta property="og:type" content="website" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
       <PageWrapper>
-        <div className="flex flex-col md:flex-row py-12 md:py-20 px-4 gap-8">
+        <div className="flex flex-col md:flex-row py-12 md:py-20 px-2 md:px-8 gap-8">
 
           {/* Sidebar */}
           <motion.aside
-            className="md:w-64 flex-shrink-0 sticky top-20 bg-white/90 dark:bg-gray-900/90 p-6 rounded-2xl shadow-lg backdrop-blur-md border border-sky-100 dark:border-gray-700"
+            className="md:w-72 flex-shrink-0 sticky md:top-20 h-fit bg-white/90 dark:bg-gray-900/90 p-6 rounded-2xl shadow-lg backdrop-blur-md border border-sky-100 dark:border-gray-700"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
+            {/* Profile Image */}
             <div className="w-40 h-40 relative rounded-full overflow-hidden border-4 border-sky-400 shadow-lg mx-auto mb-6">
               <Image
                 src="/images/kishor.jpg"
@@ -39,23 +71,54 @@ export default function Resume() {
                 onError={(e) => e.currentTarget.src = '/images/fallback.jpg'}
               />
             </div>
-            <h1 className="text-3xl font-extrabold text-center text-gray-900 dark:text-white mb-2">Kishor Munikar</h1>
+
+            {/* Name and Title */}
+            <h1 className="text-3xl font-extrabold text-center text-gray-900 dark:text-white mb-2">
+              Kishor Munikar
+            </h1>
             <p className="text-center text-gray-700 dark:text-gray-300 mb-4">
               Full Stack Developer | IT Engineer | Technical Instructor
             </p>
-            <div className="text-gray-700 dark:text-gray-300 text-lg flex flex-col gap-2 mb-4">
-              <p>Email: kishor@example.com</p>
-              <p>Phone: +977-9812345678</p>
+
+            {/* Contact Info */}
+            <div className="text-gray-700 dark:text-gray-300 text-center text-lg mb-4">
+              <p>📧 k1shor.mkar@gmail.com</p>
+              <p>📞 +977-9860113289</p>
             </div>
-            <div className="flex justify-center gap-4 text-gray-700 dark:text-gray-300 mb-6 text-xl">
-              <Link href="https://github.com/kishor" target="_blank">GitHub</Link>
-              <Link href="https://linkedin.com/in/kishor" target="_blank">LinkedIn</Link>
-              <Link href="https://facebook.com/kishor" target="_blank">Facebook</Link>
-              <Link href="https://instagram.com/kishor" target="_blank">Instagram</Link>
+
+            {/* Social Icons */}
+            <div className="flex justify-center gap-5 text-gray-700 dark:text-gray-300 mb-8 text-2xl">
+              <Link href="https://github.com/kishor" target="_blank" className="hover:text-sky-600 transition">
+                <FaGithub />
+              </Link>
+              <Link href="https://linkedin.com/in/kishor" target="_blank" className="hover:text-sky-600 transition">
+                <FaLinkedin />
+              </Link>
+              <Link href="https://facebook.com/kishor" target="_blank" className="hover:text-sky-600 transition">
+                <FaFacebook />
+              </Link>
+              <Link href="https://instagram.com/kishor" target="_blank" className="hover:text-sky-600 transition">
+                <FaInstagram />
+              </Link>
+            </div>
+
+            {/* Navigation Links */}
+            <div className="flex flex-col gap-2 mb-8 text-center">
+              {sections.map((section) => (
+                <button
+                  key={section.id}
+                  onClick={() => handleScroll(section.id)}
+                  className="px-4 py-2 text-lg font-medium rounded-lg text-gray-700 dark:text-gray-300 hover:bg-sky-500 hover:text-white transition"
+                >
+                  {section.label}
+                </button>
+              ))}
             </div>
 
             {/* Tech Stack */}
-            <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4 text-center">Tech Stack</h2>
+            <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4 text-center">
+              Tech Stack
+            </h2>
             <div className="flex flex-wrap gap-2 justify-center">
               {techStack.map((tech) => (
                 <motion.div
@@ -68,7 +131,7 @@ export default function Resume() {
               ))}
             </div>
 
-            {/* Download Button */}
+            {/* Download Resume Button */}
             <Link
               href="/docs/kishor-resume.pdf"
               target="_blank"
@@ -81,117 +144,94 @@ export default function Resume() {
 
           {/* Main Content */}
           <motion.main
-            className="flex-1"
+            className="flex-1 space-y-16"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            {/* Experience Section */}
-            <section className="mb-12">
+            {/* === Experience Section === */}
+            <section id="experience">
               <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-200 mb-6">Experience</h2>
               <div className="space-y-8 text-gray-700 dark:text-gray-300 text-lg border-l-4 border-sky-400 pl-6">
                 <div>
-                  <p className="font-bold text-xl">Full Stack Developer, Project Manager <span className="text-sm text-gray-500">– Index IT Hub (2022–Present)</span></p>
-                  <p className="mt-2">Built and deployed client projects, led development teams, and maintained code quality across MERN stacks.</p>
+                  <p className="font-bold text-xl">Full Stack Developer & Project Manager – Index IT Hub (2022–Present)</p>
+                  <p className="mt-2">Built and deployed full-scale web solutions, led development teams, and managed software lifecycle from design to deployment.</p>
                 </div>
                 <div>
-                  <p className="font-bold text-xl">Trainer, Mentor & Center Head <span className="text-sm text-gray-500">– Evolve IT Hub, Nepal (2022–Present)</span></p>
-                  <p className="mt-2">Leading development programs, mentoring students, managing center operations, and delivering real-world project guidance in web development using MERN stack.</p>
+                  <p className="font-bold text-xl">Trainer, Mentor & Center Head – Evolve IT Hub (2022–Present)</p>
+                  <p className="mt-2">Trained and mentored students in modern web technologies, coordinated academic operations, and led projects for skill-based education.</p>
                 </div>
                 <div>
-                  <p className="font-bold text-xl">Trainer <span className="text-sm text-gray-500">– Dursikshya Education Network (2020–2022)</span></p>
-                  <p className="mt-2">Conducted practical training sessions in web technologies and programming fundamentals for students, enhancing their skills for real-world applications.</p>
+                  <p className="font-bold text-xl">Trainer – Dursikshya Education Network (2020–2022)</p>
+                  <p className="mt-2">Delivered technical training sessions on web development, programming logic, and hands-on project-based learning modules.</p>
                 </div>
                 <div>
-                  <p className="font-bold text-xl">Admin Head <span className="text-sm text-gray-500">– Annapurna Secondary School (2015–2020)</span></p>
-                  <p className="mt-2">Managed administrative operations, coordinated staff and student programs, and implemented organizational systems to improve overall school efficiency.</p>
+                  <p className="font-bold text-xl">Admin Head – Annapurna Secondary School (2015–2020)</p>
+                  <p className="mt-2">Oversaw school administration, implemented digital systems, and optimized workflow for efficient data and staff management.</p>
                 </div>
               </div>
             </section>
 
-            {/* Education Section */}
-            <section className="mb-12">
+            {/* === Education Section === */}
+            <section id="education">
               <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-200 mb-6">Education</h2>
               <div className="space-y-6 text-gray-700 dark:text-gray-300 text-lg border-l-4 border-sky-400 pl-6">
                 <div>
-                  <p className="font-bold text-xl">MSc in System and Control Engineering (2012) <span className="text-sm text-gray-500">– Telemark University College, Porsgrunn, Norway</span></p>
-                  <p className="mt-2">Focused on designing control systems for digital equipment in industrial applications, involving sensors and automation techniques.</p>
+                  <p className="font-bold text-xl">MSc in System and Control Engineering – Telemark University College, Norway (2012)</p>
+                  <p className="mt-2">Specialized in designing control systems for industrial digital equipment involving sensors, data processing, and automation.</p>
                 </div>
                 <div>
-                  <p className="font-bold text-xl">BE in Information Technology (2010) <span className="text-sm text-gray-500">– Cosmos College of Management and Technology, Pokhara University, Lalitpur, Nepal</span></p>
-                  <p className="mt-2">Focused mainly on software development, including web/app development, database management, and software engineering principles.</p>
+                  <p className="font-bold text-xl">BE in Information Technology – Cosmos College, Pokhara University (2010)</p>
+                  <p className="mt-2">Focused on software development, web technologies, and database management with hands-on engineering projects.</p>
                 </div>
                 <div>
-                  <p className="font-bold text-xl">+2 in Science (2005) <span className="text-sm text-gray-500">– Annapurna Secondary School</span></p>
-                  <p className="mt-2">Completed higher secondary education with focus on physics and mathematics.</p>
+                  <p className="font-bold text-xl">+2 in Science – Annapurna Secondary School (2005)</p>
+                  <p className="mt-2">Built foundational understanding in mathematics and physics to support engineering and computing studies.</p>
                 </div>
               </div>
             </section>
 
-            {/* Projects Section */}
-            <section className="mb-12">
+            {/* === Projects Section === */}
+            <section id="projects">
               <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-200 mb-6">Projects</h2>
               <div className="space-y-8 text-gray-700 dark:text-gray-300 text-lg border-l-4 border-sky-400 pl-6">
                 <div>
                   <p className="font-bold text-xl">E-commerce Websites</p>
-                  <p className="mt-2">Developed multiple e-commerce platforms with product catalogs, secure checkout, and responsive design.</p>
-                </div>
-                <div>
-                  <p className="font-bold text-xl">Portfolio & Personal Websites</p>
-                  <p className="mt-2">Built personal and portfolio websites showcasing projects, skills, and achievements with modern UI/UX.</p>
-                </div>
-                <div>
-                  <p className="font-bold text-xl">Information Websites</p>
-                  <p className="mt-2">Developed informational websites with accessibility, clean layouts, and user-friendly navigation.</p>
-                </div>
-                <div>
-                  <p className="font-bold text-xl">Job Portal Platforms</p>
-                  <p className="mt-2">Designed job portal platforms with candidate registration, employer postings, and search/filter functionality.</p>
+                  <p className="mt-2">Developed secure, scalable e-commerce platforms with smooth checkout and responsive design.</p>
                 </div>
                 <div>
                   <p className="font-bold text-xl">Smart Resume Builder</p>
-                  <p className="mt-2">Dynamic resume builder with live preview and PDF export functionality.</p>
+                  <p className="mt-2">Built an interactive resume builder with live preview and export features using modern web technologies.</p>
                 </div>
                 <div>
                   <p className="font-bold text-xl">E-learning Platform</p>
-                  <p className="mt-2">Full-featured e-learning platform with dashboards for students, instructors, and admins, including assessments.</p>
-                </div>
-                <div>
-                  <p className="font-bold text-xl">POS & Website Integration</p>
-                  <p className="mt-2">Integrated POS system with online website for smooth inventory management, sales, and online presence.</p>
+                  <p className="mt-2">Designed and deployed a complete e-learning platform with dashboards and course management.</p>
                 </div>
                 <div>
                   <p className="font-bold text-xl">Object Path Determination (Master’s Thesis)</p>
-                  <p className="mt-2">Developed a system to determine object trajectories using images from two angles. Implemented in MATLAB.</p>
+                  <p className="mt-2">Implemented MATLAB-based image analysis to determine object trajectories from multi-angle imagery.</p>
                 </div>
                 <div>
-                  <p className="font-bold text-xl">Cargo Ship Testing System Proposal (Master's Project)</p>
-                  <p className="mt-2">Proposed enhancements to cargo ship testing systems integrating software development principles for efficiency.</p>
-                </div>
-                <div>
-                  <p className="font-bold text-xl">Smart Library Management System (Bachelors Project)</p>
-                  <p className="mt-2">Created a Library Management System using .NET and SQL Server, enabling self-checkout, reservations, and overall management.</p>
+                  <p className="font-bold text-xl">Smart Library Management System</p>
+                  <p className="mt-2">Developed .NET-based library automation system supporting self-checkout and book reservations.</p>
                 </div>
               </div>
             </section>
 
-            {/* Achievements Section */}
-            <section className="mb-12">
+            {/* === Achievements Section === */}
+            <section id="achievements">
               <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-200 mb-6">Achievements</h2>
               <div className="space-y-6 text-gray-700 dark:text-gray-300 text-lg border-l-4 border-sky-400 pl-6">
-                <p>Founded <strong>Index IT Hub</strong>, a software development company delivering projects across web development, applications, and IT consulting, managing scalable and high-quality solutions.</p>
-                <p>Trained and mentored over <strong>500 students</strong> in trending web technologies through <strong>Evolve IT Hub</strong> and <strong>Dursikshya Education Network</strong>, providing practical project-based learning.</p>
-                <p>Led administrative digital transformation at <strong>Annapurna Secondary School</strong>, implementing digital workflows and improving operational efficiency.</p>
-                <p>Delivered multiple impactful software projects including e-commerce platforms, smart resume builders, and e-learning portals, showcasing leadership in both execution and project management.</p>
-                <p>Contributed to community learning via workshops, seminars, and hackathons, empowering students and junior developers to enhance their skills and industry readiness.</p>
+                <p>Founded <strong>Index IT Hub</strong>, providing full-scale software development and IT solutions.</p>
+                <p>Trained over <strong>500 students</strong> in modern development technologies at Evolve IT Hub, Dursikshya and colleges.</p>
+                <p>Digitally transformed administrative processes at <strong>Annapurna Secondary School</strong>.</p>
               </div>
             </section>
 
-            <div className="mt-10">
+            <div className="pt-10">
               <BackToHome />
             </div>
           </motion.main>
-
         </div>
       </PageWrapper>
     </>
