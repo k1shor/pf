@@ -151,11 +151,11 @@ export default function ContactPage() {
                   <p className="flex items-center gap-3">
                     <FaInstagram className="text-pink-500" />{' '}
                     <Link
-                      href="https://instagram.com/k1shor.mkar"
+                      href="https://instagram.com/k1shor"
                       target="_blank"
                       className="underline hover:text-indigo-600"
                     >
-                      instagram.com/k1shor.mkar
+                      instagram.com/k1shor
                     </Link>
                   </p>
                 </div>
