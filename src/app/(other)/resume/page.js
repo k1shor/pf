@@ -88,16 +88,16 @@ export default function Resume() {
 
             {/* Social Icons */}
             <div className="flex justify-center gap-5 text-gray-700 dark:text-gray-300 mb-8 text-2xl">
-              <Link href="https://github.com/kishor" target="_blank" className="hover:text-sky-600 transition">
+              <Link href="https://github.com/k1shor" target="_blank" className="hover:text-sky-600 transition">
                 <FaGithub />
               </Link>
-              <Link href="https://linkedin.com/in/kishor" target="_blank" className="hover:text-sky-600 transition">
+              <Link href="https://www.linkedin.com/in/kishor-munikar-94aa4937/" target="_blank" className="hover:text-sky-600 transition">
                 <FaLinkedin />
               </Link>
-              <Link href="https://facebook.com/kishor" target="_blank" className="hover:text-sky-600 transition">
+              <Link href="https://www.facebook.com/dE5Tructi0n/" target="_blank" className="hover:text-sky-600 transition">
                 <FaFacebook />
               </Link>
-              <Link href="https://instagram.com/kishor" target="_blank" className="hover:text-sky-600 transition">
+              <Link href="https://instagram.com/k1shor" target="_blank" className="hover:text-sky-600 transition">
                 <FaInstagram />
               </Link>
             </div>

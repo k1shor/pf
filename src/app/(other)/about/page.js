@@ -10,12 +10,74 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About Me | Kishor Munikar</title>
-        <meta
-          name="description"
-          content="Learn more about Kishor Munikar, a passionate full-stack developer from Nepal."
-        />
-      </Head>
+  <title>About Me | Kishor Munikar</title>
+
+  {/* Primary SEO */}
+  <meta
+    name="description"
+    content="Learn more about Kishor Munikar, a full-stack developer specializing in React, Next.js, Node.js, Laravel, and modern web development."
+  />
+  <meta
+    name="keywords"
+    content="Kishor Munikar, full-stack developer, React developer, Next.js developer, MERN stack, Laravel developer, web developer Nepal, software engineer"
+  />
+  <meta name="author" content="Kishor Munikar" />
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph (Facebook, LinkedIn) */}
+  <meta property="og:title" content="About Me | Kishor Munikar" />
+  <meta
+    property="og:description"
+    content="Discover the work and expertise of Kishor Munikar — a full-stack developer passionate about building scalable, modern web applications."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kishormunikar.com.np/about" />
+  <meta property="og:image" content="https://kishormunikar.com.np/images/kishor.jpg" />
+  <meta property="og:site_name" content="Kishor Munikar Portfolio" />
+
+  {/* Twitter Cards */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Me | Kishor Munikar" />
+  <meta
+    name="twitter:description"
+    content="Full-stack developer specializing in React, Next.js, Laravel, Node.js, and modern web technologies."
+  />
+  <meta name="twitter:image" content="https://kishormunikar.com.np/images/kishor.jpg" />
+
+  {/* Mobile Meta */}
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0284c7" />
+
+  {/* Canonical URL */}
+  <link rel="canonical" href="https://kishormunikar.com.np/about" />
+
+  {/* JSON-LD Structured Data */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kishor Munikar",
+        "url": "https://kishormunikar.com.np",
+        "sameAs": [
+          "https://www.linkedin.com/in/kishor-munikar-94aa4937/",
+          "https://github.com/k1shor",
+          "https://www.facebook.com/dE5Tructi0n/"
+        ],
+        "image": "https://kishormunikar.com.np/images/kishor.jpg",
+        "jobTitle": "Full-Stack Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Kishor Munikar Portfolio",
+          "url": "https://kishormunikar.com.np"
+        },
+        "description": "Full-stack developer specializing in React, Next.js, Node.js, Laravel, and modern web development. Passionate about building scalable, user-friendly applications."
+      })
+    }}
+  />
+</Head>
+
 
       <PageWrapper>
         <div className="flex justify-center py-12 md:py-20 px-4">
@@ -64,7 +126,7 @@ export default function About() {
                   </p>
 
                   <p>
-                    Beyond the frontend, my work extends into backend development, where I set up APIs, manage authentication flows, connect databases, and resolve deployment challenges. I’ve worked with Express, server-side rendering, API handlers, and various hosting environments, including cPanel deployments. I love solving practical problems—whether it’s fixing logic issues, rewriting cleaner APIs, or integrating secure and reliable payment solutions like Stripe. My goal is always to create robust, production-ready features that work smoothly in real-world scenarios.
+                    Beyond the frontend, my work extends into backend development, where I set up APIs, manage authentication flows, connect databases, and resolve deployment challenges. I’ve worked with Express, server-side rendering, API handlers, and various hosting environments, including cPanel deployments. I love solving practical problems, whether it’s fixing logic issues, rewriting cleaner APIs, or integrating secure and reliable payment solutions like Stripe. My goal is always to create robust, production-ready features that work smoothly in real-world scenarios.
                   </p>
 
                   <p>
