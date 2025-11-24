@@ -10,7 +10,7 @@ import {
   FaBriefcase,
   FaEnvelope,
   FaFileAlt,
-  FaHeart,
+  // FaHeart,
   FaBars,
 } from 'react-icons/fa';
 
@@ -45,7 +45,7 @@ export default function Header() {
     { href: '/resume', label: 'Resume', icon: <FaFileAlt /> },
     { href: '/experience', label: 'Career', icon: <FaBriefcase /> },
     { href: '/blogs', label: 'Blogs', icon: <FaFileAlt /> },
-    { href: '/passion', label: 'Passion', icon: <FaHeart /> },
+    // { href: '/passion', label: 'Passion', icon: <FaHeart /> },
     { href: '/contact', label: 'Contact', icon: <FaEnvelope /> },
   ];
 

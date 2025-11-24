@@ -6,7 +6,7 @@ const cards = [
   { title: "Resume", link: "/resume", bg: "bg-sky-100", image: "/images/resume-bg.jpg" },
   { title: "Experience", link: "/experience", bg: "bg-yellow-100", image: "/images/experience-bg.jpg" },
   { title: "Kishor Munikar", link: "/home", bg: "bg-green-100", image: "/images/home-bg.jpg" },
-  { title: "Passion", link: "/passion", bg: "bg-indigo-100", image: "/images/passion-bg.jpg" },
+  { title: "Blogs", link: "/blogs", bg: "bg-indigo-100", image: "/images/passion-bg.jpg" },
   { title: "Contact", link: "/contact", bg: "bg-pink-100", image: "/images/contact-bg.jpg" },
   { title: "Projects", link: "/projects", bg: "bg-purple-100", image: "/images/projects-bg.jpg" },
 ];
