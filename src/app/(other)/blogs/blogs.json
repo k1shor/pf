@@ -1,0 +1,100 @@
+[
+  {
+    "id": "parallel-programming",
+    "slug": "parallel-programming",
+    "title": "Parallel Programming",
+    "description": "Explains how tasks run simultaneously on multi-core systems to make programs faster and more efficient.",
+    "keywords": "Parallel Programming, concurrency, multi-core computing, data parallelism, task parallelism, beginner guide",
+    "author": "Kishor Munikar",
+    "publishDate": "2025-11-24",
+    "sections": [
+      {
+        "heading": null,
+        "content": "In today’s world of multi-core computers, parallel programming is a way to make programs run faster by doing multiple tasks at the same time. Instead of completing one task after another, tasks can run simultaneously, making computers more efficient."
+      },
+      {
+        "heading": "What is Parallel Programming?",
+        "content": "Parallel programming allows a program to split its work into smaller pieces that can be executed at the same time on different processors or cores. It is widely used in areas like scientific computing, data analysis, graphics, and real-time applications."
+      },
+      {
+        "heading": "Benefits of Parallel Programming",
+        "list": [
+          "Faster program execution by running multiple tasks at once.",
+          "Better use of modern multi-core processors.",
+          "Ability to handle larger and more complex tasks efficiently."
+        ]
+      },
+      {
+        "heading": "Types of Parallelism",
+        "content": "There are two main types of parallelism:",
+        "list": [
+          "Data Parallelism: The same operation is applied to different pieces of data at the same time.",
+          "Task Parallelism: Different tasks run at the same time, often performing different operations."
+        ]
+      },
+      {
+        "heading": "How It Works",
+        "content": "Programs divide work into smaller tasks and assign them to different cores or processors. These tasks run together and finish faster than running one by one. Modern programming languages and tools provide ways to create parallel programs easily."
+      },
+      {
+        "heading": "Challenges",
+        "content": "While parallel programming is powerful, it can be tricky. Tasks may need to share resources safely, and designing programs to run efficiently in parallel can be more complex than writing simple sequential code."
+      },
+      {
+        "heading": "Conclusion",
+        "content": "Parallel programming is an important skill for modern computing. By learning how to run tasks simultaneously, students and developers can make applications faster, more efficient, and able to handle bigger problems. Understanding the basics of parallel programming is the first step toward building high-performance software."
+      }
+    ]
+  },
+  {
+    "id": "pair-programming",
+    "slug": "pair-programming",
+    "title": "Pair Programming",
+    "description": "Shows how two developers collaborate on the same code to improve quality and share knowledge.",
+    "keywords": "Pair Programming, collaborative coding, software development, coding techniques, teamwork",
+    "author": "Kishor Munikar",
+    "publishDate": "2025-11-24",
+    "sections": [
+      {
+        "heading": null,
+        "content": "Pair programming is a software development technique where two developers work together on the same code at one workstation. One writes code while the other reviews it in real-time, offering suggestions and catching mistakes early."
+      },
+      {
+        "heading": "Roles in Pair Programming",
+        "list": [
+          "Driver: The developer who writes the code.",
+          "Observer/Navigator: The developer who reviews the code, thinks ahead, and suggests improvements."
+        ]
+      },
+      {
+        "heading": "Benefits of Pair Programming",
+        "list": [
+          "Improves code quality by catching errors early.",
+          "Promotes knowledge sharing between team members.",
+          "Encourages collaboration and better problem-solving.",
+          "Reduces the risk of project delays caused by individual mistakes."
+        ]
+      },
+      {
+        "heading": "Common Techniques",
+        "list": [
+          "Ping-Pong: Switching roles frequently after completing small tasks.",
+          "Strong-Style: The observer suggests ideas while the driver implements them.",
+          "Remote Pairing: Using collaborative tools to code together from different locations."
+        ]
+      },
+      {
+        "heading": "Challenges",
+        "list": [
+          "Requires good communication and patience.",
+          "Can initially slow down development until the team gets used to it.",
+          "Needs a supportive work culture to implement effectively."
+        ]
+      },
+      {
+        "heading": "Conclusion",
+        "content": "Pair programming is a powerful technique for improving software quality, team collaboration, and knowledge transfer. When done correctly, it helps teams produce better code and fosters a learning environment where developers grow together."
+      }
+    ]
+  }
+]
