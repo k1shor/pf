@@ -24,12 +24,18 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7824973479075859"
+          crossOrigin="anonymous"
+        ></script>
+
       </head>
       <body
         className="bg-white text-gray-700 dark:bg-gray-900 dark:text-gray-300 transition-colors duration-300"
         style={{
           fontFamily: 'var(--font-outfit), system-ui, sans-serif',
-          backgroundImage: "url('/images/bg-light.jpg')", 
+          backgroundImage: "url('/images/bg-light.jpg')",
           backgroundAttachment: "fixed",
         }}
       >

@@ -50,6 +50,7 @@ export default function Header() {
   ];
 
   return (
+    
     <header className="w-full px-6 py-4 flex justify-between items-center bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-md sticky top-0 z-50 border-b border-sky-100 dark:border-gray-700">
       {/* === Left Section === */}
       <div className="flex items-center gap-4">
